@@ -11,5 +11,5 @@
 [How to]()
 
   * # Backend
-  * [pillinger](howto/pillinger.md)
+  * [Dillinger](howto/dillinger.md)
 - - - -
