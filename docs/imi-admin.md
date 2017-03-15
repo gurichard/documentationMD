@@ -1,9 +1,9 @@
-Introduction à l'utilisation d'imi-admin!
--------------------------------------------------------
-Depuis la version **0.26.0** d'iv-middleware-server, les commandes disponibles depuis le script de service tel que *reload*, *kick_user*, *delogall*, *enable_log_levels* et *disable_log_levels* ont été déplacer sur un outil séparer pour des raisons de sécurités. Ainsi la commande *disable_log_levels* ne se trouve plus au même niveau que la commande *restart*. Il n'est normalement plus possible de *restart* le serveur par erreur via un <kbd>Ctrl+r</kbd> malvenu.
+Introduction à l'utilisation d'imi-admin
+----------------------------------------
+Depuis la version **0.27.0** d'iv-middleware-server, les commandes disponibles depuis le script de service tel que *reload*, *kick_user*, *delogall*, *enable_log_levels* et *disable_log_levels* ont été déplacer sur un outil séparer pour des raisons de sécurités. Ainsi la commande *disable_log_levels* ne se trouve plus au même niveau que la commande *restart*. Il n'est normalement plus possible de *restart* le serveur par erreur via un <kbd>Ctrl+r</kbd> malvenu.
 
 Prérequis et changements
--------------------------------------
+------------------------
 #### Package devenu obsolète
 - socat
 
@@ -15,7 +15,7 @@ Prérequis et changements
 - une socket unix, utilisable uniquement par un utilisateur root, actuellement fournie par iv-middleware-server.
 
 Utilisation générale
-----------------------------
+--------------------
 imi-admin est équipé d'une aide interactive permettant d'accéder à l’ensemble des commandes et de leur aide.
 
 - Pour accéder à l'aide générale du script, donnant la définition des différentes commandes:
@@ -24,7 +24,7 @@ imi-admin -h
 ```
 
 Gestion du provisioning et de la configuration
------------------------------------------------------------------
+----------------------------------------------
 #### Vérification de la configuration d'iv-middleware-server
 imi-admin a une commande permettant de vérifier la syntaxe de la configuration complète du serveur middleware. A chaque erreur détectée, la vérification échouera et donnera l'option et le couple marque blanche / projet incriminé.
 
@@ -84,7 +84,7 @@ imi-admin unload -w WHITELABEL -p PROJECT
 **Attention:** A chaque **unload**, une vérification de sécurité est faite sur le projet ciblé, si des agents sont encore connectés, le déchargement est avorté, invitant à déconnecter ceux ci.
 
 Gestion des utilisateurs
----------------------------------
+------------------------
 #### Déconnecter un utilisateur distant
 imi-admin a une commande permettant de déconnecter un utilisateur sur le middleware sur un projet cible.
 
@@ -116,7 +116,7 @@ imi-admin delogall [-w WHITELABEL] [-p PROJECT]
 **Attention:** La commande de **delogall** utilise un événement associé à l'utilisateur consistent. Si le middleware n'a pas la main sur l'utilisateur consistent il ne peut pas faire le **delogall**, pour contrer cela, l'utilisateur consistent peut être déconnecter de force (via un client explorer) afin de laisser le middleware reprendre la main dessus, ce fonctionnement opère automatiquement si le login de l'utilisateur consistent échoue avec pour raison: *Utilisateur déjà connecté*
 
 Gestion des indicateurs
----------------------------------
+-----------------------
 #### Purger les indicateurs vocaux
 imi-admin a une commande permettant de purger et de reprendre les nouvelles valeurs des indicateurs vocaux depuis le serveur dispatch sur l'ensemble des projets, sur une marque blanche ciblée ou une un projet en particulier.
 
