@@ -1,9 +1,11 @@
 # iv-doc
 
+[gimmick:themechooser](yeti)
+
 [Documentation]()
 
   * # Backend
-  * [imi-admin](doc/imi-admin.md)
+  * [imi-admin](docs/imi-admin.md)
   - - - -
   * # Frontend
   * [iv-live-banner]()
