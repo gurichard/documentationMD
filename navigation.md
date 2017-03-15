@@ -1,6 +1,6 @@
-# iv-doc
+# cnx-doc
 
-[gimmick:themechooser](yeti)
+[gimmick:theme](yeti)
 
 [Documentation]()
 
@@ -15,3 +15,6 @@
   * # Backend
   * [Dillinger](howto/dillinger.md)
 - - - -
+
+[gimmick:themechooser](Selection de thème)
+
