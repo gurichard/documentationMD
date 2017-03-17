@@ -1,6 +1,5 @@
 Indicateurs agents
 =================
-
 #### Leg agent ouverte
 ##### Indicateur
 ###### outbound_state (value=str)
@@ -17,7 +16,7 @@ Indicateurs agents
 - agent_invite: suite à un progressing.invite si le state est outbound et sur la leg agent.
 - agent_trying: lors d'un trying sur la leg agent.
 - agent_ringing: lors d'un ringing sur la leg agent ou un trying code 183.
-- agent_connected: suite à connection.connected sur la leg agent, à la fin de la leg remote, et outbound_cancel.
+- agent_connected: suite à connection.connected sur la leg agent, à la fin de la leg remote, outbound_cancel et connection failed.
 - remote_invite: suite à un progressing.invite si le state est outbound et sur la leg remote.
 - remote_trying: lors d'un trying sur la leg remote.
 - remote_ringing: lors d'un ringing sur la leg remote ou un trying code 183.
@@ -36,3 +35,67 @@ Indicateurs agents
 - suite à un progressing.invite si le state est outbound et sur la leg remote = iso_now()
 - suite à outbound_cancel = stop
 - suite à un connection.disconnected (normal et sortant) = stop
+- suite à un connection.failed = stop
+
+#### Durée écoulée depuis le passage en état sortant
+##### Indicateur
+
+#### Nombre de legs cibles tentées pour la journée en cours
+##### Indicateur
+
+#### Nombre de legs cibles contactées pour la journée en cours
+##### Indicateur
+
+#### Nombre de legs cibles en échec pour la journée en cours
+##### Indicateur
+
+#### Nombre de legs cibles annulées pour la journée en cours
+##### Indicateur
+
+#### Durée en état sortant cumulée pour la journée en cours
+##### Indicateur
+
+#### Durée en contact sortant cumulée pour la journée en cours
+##### Indicateur
+
+#### Durée moyenne du temps de sonnerie des cibles sortantes pour la journée en cours
+##### Indicateur
+
+#### Durée moyenne du temps de contact avec les cibles sortantes pour la journée en cours
+##### Indicateur
+
+#### Durée moyenne du temps de mise en garde des cibles sortantes pour la journée en cours
+##### Indicateur
+
+#### Durée maximum atteinte de sonnerie d'une cible sortante sur la journée en cours
+##### Indicateur
+
+#### Durée maximum atteinte de contact avec une cible sortante sur la journée en cours
+##### Indicateur
+
+#### Durée maximum atteinte de mise en garde d'une cible sortante sur la journée cours
+##### Indicateur
+
+Indicateurs communication
+=================
+
+#### Date-heure de début de l'appel sortant en cours
+##### Indicateur
+
+#### Indentifiant de l'appel (call-id)
+##### Indicateur
+
+#### Numéro cible et nom éventuel du contact
+##### Indicateur
+
+#### Chronomètre de durée totale
+##### Indicateur
+
+#### Chronomètre de durée de tentative d'appel
+##### Indicateur
+
+#### Chronomètre de durée de contact
+##### Indicateur
+
+#### Login de l'agent qui a initié l'appel
+##### Indicateur
