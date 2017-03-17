@@ -31,4 +31,8 @@ Indicateurs agents
 
 #### Date/heure du début d'appel sortant en cours
 ##### Indicateur
-###### xxxx
+###### outbound_call_start_time (value=str)
+- valeur par défault = stop
+- suite à un progressing.invite si le state est outbound et sur la leg remote = iso_now()
+- suite à outbound_cancel = stop
+- suite à un connection.disconnected (normal et sortant) = stop
