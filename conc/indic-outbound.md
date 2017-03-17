@@ -96,15 +96,25 @@ Indicateurs communication
 
 #### Numéro cible et nom éventuel du contact
 ##### Indicateur
+###### outbound_remote_name
 
 #### Chronomètre de durée totale
 ##### Indicateur
+###### outbound_call_start_time
+- valeur par défault = stop
+- suite à un progressing.invite si le state est outbound et sur la leg remote = iso_now()
+- suite à outbound_cancel = stop
+- suite à un connection.disconnected (normal et sortant) = stop
+- suite à un connection.failed = stop
 
 #### Chronomètre de durée de tentative d'appel
 ##### Indicateur
+###### outbound_call_????_start_time
 
 #### Chronomètre de durée de contact
 ##### Indicateur
+###### outbound_call_contact_start_time
 
 #### Login de l'agent qui a initié l'appel
 ##### Indicateur
+###### outbound_source_login
