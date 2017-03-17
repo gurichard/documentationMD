@@ -37,9 +37,6 @@ Indicateurs agents
 - suite à un connection.disconnected (normal et sortant) = stop
 - suite à un connection.failed = stop
 
-#### Durée écoulée depuis le passage en état sortant
-##### Indicateur
-
 #### Nombre de legs cibles tentées pour la journée en cours
 ##### Indicateur
 
@@ -81,9 +78,21 @@ Indicateurs communication
 
 #### Date-heure de début de l'appel sortant en cours
 ##### Indicateur
+###### outbound_call_start_time (value=str)
+- valeur par défault = stop
+- suite à un progressing.invite si le state est outbound et sur la leg remote = iso_now()
+- suite à outbound_cancel = stop
+- suite à un connection.disconnected (normal et sortant) = stop
+- suite à un connection.failed = stop
 
-#### Indentifiant de l'appel (call-id)
+#### Identifiant de l'appel (call-id)
 ##### Indicateur
+##### outbound_call_id (value=str)
+- valeur par défault = ''
+- suite à un progressing.invite si le state est outbound et sur la leg remote = 'call_xxxx@...'
+- suite à outbound_cancel = ''
+- suite à un connection.disconnected (normal et sortant) = ''
+- suite à un connection.failed = ''
 
 #### Numéro cible et nom éventuel du contact
 ##### Indicateur
