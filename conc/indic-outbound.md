@@ -1,5 +1,6 @@
-Indicateurs agents
-=================
+Indicateurs librairie applicative
+=================================
+### Indicateurs agents
 #### Leg agent ouverte
 ##### Indicateur
 ###### outbound_state (value=str)
@@ -39,15 +40,27 @@ Indicateurs agents
 
 #### Nombre de legs cibles tentées pour la journée en cours
 ##### Indicateur
+###### total_leg_count
+- valeur par défault = '0'
+- incrémentation lors d'un remote_invite
 
 #### Nombre de legs cibles contactées pour la journée en cours
 ##### Indicateur
+###### contacted_leg_count
+- valeur par défault = '0'
+- incrémentation lors d'un remote_connected.
 
 #### Nombre de legs cibles en échec pour la journée en cours
 ##### Indicateur
+###### failed_leg_count
+- valeur par défault = '0'
+- incrémentation lors d'un connection.failed.
 
 #### Nombre de legs cibles annulées pour la journée en cours
 ##### Indicateur
+###### canceled_leg_count
+- valeur par défault = '0'
+- incrémentation lors d'un outbound_cancel
 
 #### Durée en état sortant cumulée pour la journée en cours
 ##### Indicateur
@@ -73,9 +86,7 @@ Indicateurs agents
 #### Durée maximum atteinte de mise en garde d'une cible sortante sur la journée cours
 ##### Indicateur
 
-Indicateurs communication
-=================
-
+### Indicateurs communication
 #### Date-heure de début de l'appel sortant en cours
 ##### Indicateur
 ###### outbound_call_start_time (value=str)
@@ -109,12 +120,45 @@ Indicateurs communication
 
 #### Chronomètre de durée de tentative d'appel
 ##### Indicateur
-###### outbound_call_????_start_time
+###### outbound_call_ringing_duration (value=str)
+- valeur par défault = ""
+- suite à un connection.connected sur la leg remote = "xx" (exemple: 22) 
 
 #### Chronomètre de durée de contact
 ##### Indicateur
-###### outbound_call_contact_start_time
+###### outbound_call_contact_duration
+- valeur par défault = ""
+- suite à un connection.disconnected sur la leg remote = "xx" (exemple: 67)
 
 #### Login de l'agent qui a initié l'appel
 ##### Indicateur
 ###### outbound_source_login
+- valeur par défault = ""
+
+
+Indicateurs CCCP
+===============
+### Indicateurs agents
+#### Nombre de legs cibles tentées pour la journée en cours
+##### Indicateur
+###### user_total_leg_count
+- valeur par défault = 0
+- est la somme de tout les total_leg_count sur 24h depuis les sessions.
+
+#### Nombre de legs cibles contactées pour la journée en cours
+##### Indicateur
+###### user_contacted_leg_count
+- valeur par défault = 0
+- est la somme de tout les contacted_leg_count sur 24h depuis les sessions.
+- 
+#### Nombre de legs cibles en échec pour la journée en cours
+##### Indicateur
+###### user_failed_leg_count
+- valeur par défault = 0
+- est la somme de tout les failed_leg_count sur 24h depuis les sessions.
+
+#### Nombre de legs cibles annulées pour la journée en cours
+##### Indicateur
+###### user_canceled_leg_count
+- valeur par défault = 0
+- est la somme de tout les canceled_leg_count sur 24h depuis les sessions.
