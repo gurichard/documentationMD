@@ -1,6 +1,7 @@
 Indicateurs CCCP
-===============
-### Indicateurs agents
+----------------
+Indicateurs agents
+=================
 #### Etat de la leg cible
 ##### user_vocal_state
 - indicateur existant
@@ -30,7 +31,6 @@ Indicateurs CCCP
   - last_state_display_name
   - outbound_state (nouveau)
   - outbound_hold_flag.value (nouveau)
-
 
 #### Date du début de l'appel sortant en cours (leg remote)
 ##### vocal_user_current_task_start_date
@@ -97,7 +97,8 @@ Indicateurs CCCP
   - sessions.last.session.profile_name (pour acceder à l'ensemble des sessions sur la journée)
   - login
 
-### Indicateurs communication
+Indicateurs communication
+========================
 Ici les indicateurs pour les communications entrantes ont été surchargé.
 Seul ceux ci sont actifs:
 - communication_create_date
@@ -114,8 +115,9 @@ Seul ceux ci sont actifs:
 - si communication sortant, valeur = outbound
 
 Indicateurs librairie applicative
-=================================
-### Indicateurs agents
+-------------------------------
+Indicateurs agents
+=================
 #### Leg agent ouverte
 ##### Indicateur
 ###### outbound_state (value=str)
@@ -198,7 +200,8 @@ Indicateurs librairie applicative
 ##### Indicateur
 - utilise outbound_contact_duration
 
-### Indicateurs communication
+Indicateurs communication
+=======================
 #### Identifiant de l'appel (call-id)
 ##### Indicateur
 ##### outbound_call_id (value=str)
