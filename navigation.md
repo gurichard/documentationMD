@@ -21,7 +21,7 @@
   * [Sortant](conc/indic-outbound.md)
   * [Annuaire](conc/replacement-addressbook.md)
 
-[Exploitation]
+[Exploitation]()
 
   * # Portail administration
   * [Conception base de données](exploit/portail-db.md)
