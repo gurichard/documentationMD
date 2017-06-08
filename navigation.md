@@ -24,7 +24,7 @@
 [Exploitation]()
 
   * # Portail administration
-  * [Conception base de données](exploit/portail-db.md)
+  * [Conception base de données](exploit/portal-db.md)
 
 - - - -
 
