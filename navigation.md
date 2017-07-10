@@ -9,6 +9,9 @@
   - - - -
   * # Frontend
   * [iv-live-banner]()
+  - - - - -
+  * # Déploiement
+  * [pypy](docs/pypy.md)
 
 [How to]()
 
