@@ -23,7 +23,7 @@ Tout cela est possible via une installation par pip
 Packages nécéssaires:
 - iv-commons
 - iv-cccp
-- txsocksjs
+- txsocksjs /!\ Ne pas oublier la branche spéciale pour pypy
 - trest
 - plague
 - ivprotocols
