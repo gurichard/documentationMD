@@ -6,6 +6,7 @@
 
   * # Backend
   * [imi-admin](docs/imi-admin.md)
+  * [iap-admin](docs/iap-admin.md)
   - - - -
   * # Frontend
   * [iv-live-banner]()
@@ -32,4 +33,3 @@
 - - - -
 
 [gimmick:themechooser](Selection de thème)
-
