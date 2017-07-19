@@ -34,9 +34,10 @@ Au lieu d'écrire la query dans la console, l'insert directement en bdd.
 ```
 iap-admin sideload_apikeys -h
 ```
+
 - Usage
 ```
-iap-admin sideload_apikeys [-h] [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] file
+iap-admin sideload_apikeys [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] file
 ```
 
 DB Migrate
@@ -47,9 +48,10 @@ Fonctionne comme l'ancien script.
 ```
 iap-admin apiserver_db_migrate -h
 ```
+
 - Usage
 ```
-iap-admin apiserver_db_migrate [-h] [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] {configapi,eventsapi} [{configapi,eventsapi} ...]
+iap-admin apiserver_db_migrate [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] [configapi,eventsapi ...]
 
 ```
 
@@ -61,9 +63,10 @@ Fonctionne comme l'ancien script.
 ```
 iap-admin create_mail_entrypoint -h
 ```
+
 - Usage
 ```
-iap-admin create_mail_entrypoint [-h] [-c CONFIG_PATH] -p PROJECT -w WHITELABEL -e ENTRYPOINTS [ENTRYPOINTS ...]
+iap-admin create_mail_entrypoint [-c CONFIG_PATH] -p PROJECT -w WHITELABEL -e ENTRYPOINTS [ENTRYPOINTS ...]
 ```
 
 Purge des records
@@ -74,9 +77,10 @@ iap-admin a une commande permettant de déclencher une purge des records sur l'a
 ```
 iap-admin purge_records -h
 ```
+
 - Usage
 ```
-iap-admin purge_records [-h] [-a] [-w WHITELABEL] [-p PROJECT] [-c CONFIG_PATH]
+iap-admin purge_records [-a] [-w WHITELABEL] [-p PROJECT] [-c CONFIG_PATH]
 ```
 
 **Note:** La commande n'a pas d'actions par défault, soit on spécifie un whitelabel / project soit on spécifie -a (--all).
