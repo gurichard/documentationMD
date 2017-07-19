@@ -52,7 +52,6 @@ iap-admin apiserver_db_migrate -h
 - Usage
 ```
 iap-admin apiserver_db_migrate [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] [configapi,eventsapi ...]
-
 ```
 
 Création d'un point d'entrée mail
