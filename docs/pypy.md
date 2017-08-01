@@ -18,6 +18,7 @@ pypy -m ensurepip
 ## Fournir les prérequis à twisted & autres packages
 Tout cela est possible via une installation par pip 
 /opt/pypy/bin/pip install pyOpenSSL service_identity demjson hashids python-dateutil
+/opt/pypy/bin/pip install twisted==16.0.0
 
 ## Fournir les packages prérequis à iv-middleware-server
 Packages nécéssaires:
