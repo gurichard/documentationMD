@@ -26,7 +26,19 @@ iap-admin est équipé d'une aide interactive permettant d'accéder à l’ensem
 iap-admin -h
 ```
 
-Création des sideload apikeys
+Résumé des commandes
+--------------------
+| Commande               | Description                                            | Risques | Impacts |
+| --------               | -----------                                            | ------- | ------- |
+| side_load_apikeys      | Importe les clés du webadmin                           | Aucun   | Aucun   |
+| db_migrate             | Mise à jour le schéma de base de données               | Coupure partielle ou totale des services mcanal | Variable, cette commande ne doit pas être utiliser à chaud |
+| create_mail_entrypoint | Création d'un point d'entrée mail                      | Aucun   | Aucun   |
+| clear_webadmin_infos   | Nettoyage du cache des informations des nodes webadmin | Utilisations supplémentaires du deploymentAPI pouvant ralentir le service si beaucoup de projets sont nettoyés | Aucun |
+| purge_records          | Purge des enregistrements                              | Ralentissement majeur des services MCANAL si un volume d'enregistrements très important est impacté (sur toutes les marques blanches et projets par exemple).| Nombreux accès disques et base de données proportionnels au volume de records. |
+| enable_log_levels      | Activation des niveaux de logs                         | Aucun | Plus d'écriture dans le fichier de log = plus gros fichier de log |
+| disable_log_evels      | Désactivation des niveaux de logs                      | Aucun | Moins d'écriture dans le fichier de log = fichier de log moins volumineux |
+
+Importer les clés du webadmin
 -----------------------------
 Au lieu d'écrire la query dans la console, l'insert directement en bdd.
 
@@ -74,8 +86,8 @@ iap-admin create_mail_entrypoint [-c CONFIG_PATH] -p PROJECT -w WHITELABEL -e EN
 
 **Attention:** Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
 
-Nettoyage du cache de les infos des webadmins
----------------------------------------------
+Nettoyage du cache des informations des webadmins
+-------------------------------------------------
 iap-admin a une commande permettant de vider le cache des informations relatives aux webadmins déjà contacter par le deploymentAPI. A chaque appel API nessitant de connaitre les informations d'un node webadmin, un cache va etre sollicité, si le cache a les informations du node concerné il les donne sinon il utilise le deploymentAPI afin de les récupérer.
 
 - Pour accéder à l'aide de **clear_webadmin_infos**, donnant la définition de la commande:
@@ -105,7 +117,7 @@ iap-admin purge_records [-a] [-w WHITELABEL] [-p PROJECT] [-c CONFIG_PATH]
 
 **Attention:** Cette commande représente un risque important pour le serveur, car cela solicite le disque du serveur et MySQL. Plus un projet a de records à purger, plus la base de donnée est solicité et les fichiers seront nombreux à être supprimer. A utiliser en periode creuse.
 
-**Note:** La commande n'a pas d'actions par défault, soit on spécifie un whitelabel / project soit on spécifie -a (--all).
+**Note:** La commande n'a pas d'actions par défault, soit on spécifie un whitelabel / project soit on spécifie -a (--all). There is no coming back from the purge !
 
 Gestion des traces
 --------------------------
