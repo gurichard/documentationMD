@@ -56,8 +56,7 @@ iap-admin db_migrate -h
 iap-admin apiserver_db_migrate [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] [configapi,eventsapi ...]
 ```
 
-- Limitations et risques
-Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
+**Attention:** Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
 
 Création d'un point d'entrée mail
 ---------------------------------
@@ -73,8 +72,7 @@ iap-admin create_mail_entrypoint -h
 iap-admin create_mail_entrypoint [-c CONFIG_PATH] -p PROJECT -w WHITELABEL -e ENTRYPOINTS [ENTRYPOINTS ...]
 ```
 
-- Limitations et risques
-Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
+**Attention:** Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
 
 Nettoyage du cache de les infos des webadmins
 ---------------------------------------------
@@ -89,9 +87,7 @@ iap-admin clear_webadmin_infos -h
 iap-admin clear_webadmin_infos -p PROJECT -w WHITELABEL
 ```
 
-- Limitations et risques
-Le vidage du cache en lui même ne représente aucune charge pour le serveur, mais cela va soliciter le deploymentAPI.
-
+**Attention:** Le vidage du cache en lui même ne représente aucune charge pour le serveur, mais cela va soliciter le deploymentAPI.
 
 Purge des records
 -----------------
@@ -107,12 +103,9 @@ iap-admin purge_records -h
 iap-admin purge_records [-a] [-w WHITELABEL] [-p PROJECT] [-c CONFIG_PATH]
 ```
 
-- Limitations et risques
-Cette commande représente un risque important pour le serveur, car cela solicite le disque du serveur et MySQL. Plus un projet a de records à purger, plus la base de donnée est solicité et les fichiers seront nombreux à être supprimer.
-A utiliser en periode creuse.
+**Attention:** Cette commande représente un risque important pour le serveur, car cela solicite le disque du serveur et MySQL. Plus un projet a de records à purger, plus la base de donnée est solicité et les fichiers seront nombreux à être supprimer. A utiliser en periode creuse.
 
 **Note:** La commande n'a pas d'actions par défault, soit on spécifie un whitelabel / project soit on spécifie -a (--all).
-
 
 Gestion des traces
 --------------------------
@@ -129,8 +122,7 @@ iap-admin enable_log_levels -h
 iap-admin enable_log_levels [levels...]
 ```
 
-- Limitations et risques
-L'activation de nombreux niveaux de trace va faire gonfler la taille des logs, en dehors de cela, l'activation en elle même ne représente pas de risque pour le serveur.
+**Attention:** L'activation de nombreux niveaux de trace va faire gonfler la taille des logs, en dehors de cela, l'activation en elle même ne représente pas de risque pour le serveur.
 
 **Note:** Niveaux de logs disponibles => DEBUG, INFO, ERROR, WARN.
 
@@ -142,7 +134,6 @@ iap-admin a une commande permettant de désactiver un niveau de trace sur les lo
 iap-admin disable_log_levels -h
 ```
 
-- Limitations et risques
-La désactivation de nombreux niveaux de trace va alléger la taille des logs, en dehors de cela, la désactivation en elle même ne représente pas de risque pour le serveur.
+**Attention:** La désactivation de nombreux niveaux de trace va alléger la taille des logs, en dehors de cela, la désactivation en elle même ne représente pas de risque pour le serveur.
 
 **Note:** Niveaux de logs disponibles => DEBUG, INFO, ERROR, WARN.
