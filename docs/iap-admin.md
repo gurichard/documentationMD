@@ -40,8 +40,7 @@ iap-admin sideload_apikeys -h
 iap-admin sideload_apikeys [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] file
 ```
 
-- Limitations et risques
-Solicite très peu le serveur en lui même. Risque minimal.
+**Attention:** Solicite très peu le serveur en lui même. Risque minimal.
 
 DB Migrate
 ----------
