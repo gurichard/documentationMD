@@ -40,7 +40,7 @@ Résumé des commandes
 
 Importer les clés du webadmin
 -----------------------------
-Au lieu d'écrire la query dans la console, l'insert directement en bdd.
+Insert les clé dans le base de donnée.
 
 - Pour accéder à l'aide de **sideload_apikeys**, donnant la définition de la commande:
 ```
@@ -51,8 +51,6 @@ iap-admin sideload_apikeys -h
 ```
 iap-admin sideload_apikeys [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] file
 ```
-
-**Attention:** Solicite très peu le serveur en lui même. Risque minimal.
 
 DB Migrate
 ----------
@@ -68,7 +66,7 @@ iap-admin db_migrate -h
 iap-admin apiserver_db_migrate [-p CONFIG_PATH] [-c MODULES_CONFIG_PATH] [configapi,eventsapi ...]
 ```
 
-**Attention:** Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
+**Attention:** Ne doit être fait que lors d'une install ou une mise à jour. Peut tout casser et rendre les services MCANAL down.
 
 Création d'un point d'entrée mail
 ---------------------------------
@@ -83,8 +81,6 @@ iap-admin create_mail_entrypoint -h
 ```
 iap-admin create_mail_entrypoint [-c CONFIG_PATH] -p PROJECT -w WHITELABEL -e ENTRYPOINTS [ENTRYPOINTS ...]
 ```
-
-**Attention:** Ne doit être fait que lors d'une install ou une mise à jour.Solicite très peu le serveur en lui même. Risque minimal.
 
 Nettoyage du cache des informations des webadmins
 -------------------------------------------------
