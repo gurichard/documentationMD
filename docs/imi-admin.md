@@ -1,18 +1,7 @@
 Introduction à l'utilisation d'imi-admin
 ----------------------------------------
-Depuis la version **0.27.0** d'iv-middleware-server, les commandes disponibles depuis le script de service tel que *reload*, *kick_user*, *delogall*, *enable_log_levels* et *disable_log_levels* ont été déplacer sur un outil séparer pour des raisons de sécurités. Ainsi la commande *disable_log_levels* ne se trouve plus au même niveau que la commande *restart*. Il n'est normalement plus possible de *restart* le serveur par erreur via un <kbd>Ctrl+r</kbd> malvenu.
+Les commandes disponibles depuis le script de service tel que *reload*, *kick_user*, *delogall*, *enable_log_levels* et *disable_log_levels* ont été déplacé sur un outil séparer pour des raisons de sécurités. Ainsi la commande *disable_log_levels* ne se trouve plus au même niveau que la commande *restart*. Il n'est normalement plus possible de *restart* le serveur par erreur via un <kbd>Ctrl+r</kbd> malvenu.
 
-Prérequis et changements
-------------------------
-#### Package devenu obsolète
-- socat
-
-#### Packages nécessaires
-- python2.6
-- python-argparse
-
-#### Élément nécessaire
-- une socket unix, utilisable uniquement par un utilisateur root, actuellement fournie par iv-middleware-server.
 
 Utilisation générale
 --------------------
