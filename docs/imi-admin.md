@@ -16,15 +16,15 @@ Résumé des commandes
 --------------------
 | Commande               | Description                                            | Risques | Impacts |
 | --------               | -----------                                            | ------- | ------- |
-| check_config      | Vérifie la configuration du middleware                      | Aucun   | Lecture des fichiers de configurations   |
-| reload | Recharge la configuration du middleware et ses projets | Si la configuration est mauvaise le reload va échoué | Lecture des fichiers de configurations, créations et/ou destructions de connexion vers les différents serveurs vocaux, mail et api. |
-| load | Charge ou recharge un projet en particulier | Si la configuration de ce projet est mauvaise le load va échoué | Lecture des fichiers de configurations, créations et/ou destructions de connexions vers les différents serveurs vocaux, mail et api. |
+| check_config      | Vérifie la configuration du middleware                      | Aucun   | Lecture des fichiers de configuration   |
+| reload | Recharge la configuration du middleware et ses projets | Si la configuration est mauvaise le reload va échoué | Lecture des fichiers de configuration, créations et/ou destructions de connexion vers les différents serveurs vocaux, mail et api. |
+| load | Charge ou recharge un projet en particulier | Si la configuration de ce projet est mauvaise le load va échoué | Lecture des fichiers de configuration, créations et/ou destructions de connexions vers les différents serveurs vocaux, mail et api. |
 | unload | Décharge un projet en particulier | Si des agents sont connectés sur le projet en question, la commande échouera | Destructions des connexions relatives à ce projet |
 | kick_user | Kick un utilisateur connecté au middleware d'un projet en particulier | Aucun | Aucun |
-| deloglall | Déconnecte tout les agents du serveur/whitelabel/projet concernés | Aucun | Aucun |
+| deloglall | Déconnecte tout les agents du serveur/whitelabel/projet concerné | Aucun | Aucun |
 | flush_indicators | Permet de réinitialiser les indicateurs vocaux et mail sur un projet | Charge CPU importante et charge réseau entre le middleware et le serveur vocal du projet  | Coupure du service potentielle (100% CPU) |
-| enable_log_levels      | Activation des niveaux de logs                         | Aucun | Plus d'écriture dans le fichier de log = plus gros fichier de log |
-| disable_log_evels      | Désactivation des niveaux de logs                      | Aucun | Moins d'écriture dans le fichier de log = fichier de log moins volumineux |
+| enable_log_levels      | Activation des niveaux de logs                         | Aucun | Plus d'écritures dans le fichier de log = plus gros fichier de log |
+| disable_log_evels      | Désactivation des niveaux de logs                      | Aucun | Moins d'écritures dans le fichier de log = fichier de log moins volumineux |
 
 
 Gestion du provisioning et de la configuration

@@ -23,8 +23,8 @@ Résumé des commandes
 | create_mail_entrypoint | Création d'un point d'entrée mail                      | Aucun   | Aucun   |
 | clear_webadmin_infos   | Nettoyage du cache des informations des nodes webadmin | Utilisations supplémentaires du deploymentAPI pouvant ralentir le service si beaucoup de projets sont nettoyés | Aucun |
 | purge_records          | Purge des enregistrements                              | Ralentissement majeur des services MCANAL si un volume d'enregistrements très important est impacté (sur toutes les marques blanches et projets par exemple).| Nombreux accès disques et base de données proportionnels au volume de records. |
-| enable_log_levels      | Activation des niveaux de logs                         | Aucun | Plus d'écriture dans le fichier de log = plus gros fichier de log |
-| disable_log_evels      | Désactivation des niveaux de logs                      | Aucun | Moins d'écriture dans le fichier de log = fichier de log moins volumineux |
+| enable_log_levels      | Activation des niveaux de logs                         | Aucun | Plus d'écritures dans le fichier de log = plus gros fichier de log |
+| disable_log_evels      | Désactivation des niveaux de logs                      | Aucun | Moins d'écritures dans le fichier de log = fichier de log moins volumineux |
 
 Importer les clés du webadmin
 -----------------------------
